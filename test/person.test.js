@@ -16,4 +16,8 @@ describe('Person', ()=> {
         expect(person.firstName).to.equal('Amy')
     })
 
+    it ('should return full name', () => {
+    var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
+    expect(person.fullname()).to.equal("Joe Bloggs")
+})
 })
