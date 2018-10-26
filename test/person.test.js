@@ -20,5 +20,14 @@ describe('Person', ()=> {
     it ('should return full name', () => {
     var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
     expect(person.fullname()).to.equal("Joe Bloggs")
-})
+    })
+
+    it ('should accept new emails and add them to the emails array', () => {
+    var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
+    person.addEmail('joe@example.com')
+    person.addEmail('joe.briggs@example.com')
+
+    expect(person.emails).to.deep.equal(['joe@example.com', 'joe.briggs@example.com'])
+    })
+    
 })
