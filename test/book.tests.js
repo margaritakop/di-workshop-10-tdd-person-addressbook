@@ -13,7 +13,8 @@ describe('Book', ()=> {
     it('should add person to the array of entries', () =>{
         var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
         var book = new Book
-        expect(book.add(person)).to.deep.equal([person])
+        book.add(person)
+        expect(book.entries).to.deep.equal([person])
     }
     )
 })
