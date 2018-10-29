@@ -4,6 +4,7 @@ class Person {
         this.surname = surname
         this.dob = dob
         this.emails = []
+        this.phones = []
     }
     fullname(){
         return this.firstName + ' ' + this.surname
@@ -11,6 +12,9 @@ class Person {
 
     addEmail(email){
         this.emails.push(email)
+    }
+    addPhoneNumber(phone){
+        this.phones.push(phone)
     }
 }
 
