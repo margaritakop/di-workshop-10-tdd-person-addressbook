@@ -29,5 +29,13 @@ describe('Person', ()=> {
 
     expect(person.emails).to.deep.equal(['joe@example.com', 'joe.briggs@example.com'])
     })
+
+    it ('should accept new phone number and add them to the phone numbers array', () =>{
+        var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
+        person.addPhoneNumber('07802810000')
+        person.addPhoneNumber('1234567890')
+
+    expect(person.phones).to.deep.equal(['07802810000', '1234567890'])
+    })
     
 })
