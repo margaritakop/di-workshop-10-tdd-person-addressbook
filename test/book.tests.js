@@ -24,4 +24,10 @@ describe('Book', ()=> {
         book.add(person)
         expect(book.findByFirstName('Joe')).to.equal(person)
     })
+    it ('should return NaN if there is no mathching name searched', () => {
+        var person = new Person('Joe', 'Bloggs', '1 Jan 1990')
+        var book = new Book
+        book.add(person)
+        expect(book.findByFirstName('Amy')).to.equal(undefined)
+    })
 })
